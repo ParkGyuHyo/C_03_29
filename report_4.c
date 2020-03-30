@@ -6,7 +6,7 @@ void phone_division(char *phone);
 int main(void){
 	char number[50];
 	
-	printf("ÈŞ´ëÆù ¹øÈ£ (-)Á¦¿ÜÇÏ°í ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä: ");
+	printf("íœ´ëŒ€í° ë²ˆí˜¸ (-)ì œì™¸í•˜ê³  ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”: ");
 	scanf("%s", number);
 	
 	phone_division(number);
@@ -23,6 +23,7 @@ void phone_division(char *phone) {
 		memmove(num+4, phone+3, 3);
 		memmove(num+7, "-", 1);
 		memmove(num+8, phone+6, 5);
+		printf("%s", num);
 	}
 	
 	else if (strlen(phone) == 11) {
@@ -31,10 +32,11 @@ void phone_division(char *phone) {
 		memmove(num+4, phone+3, 4);
 		memmove(num+8, "-", 1);
 		memmove(num+9, phone+7, 5);
+		printf("%s", num);
 	}
 	
 	else {
-		printf("ÀüÈ­¹øÈ£¸¦ Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+		printf("ì „í™”ë²ˆí˜¸ë¥¼ ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 		return 1;
 	}
 }
